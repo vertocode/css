@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invalid pseudo class simple</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 1em;
+        }
+
+        input:invalid {
+            background-color: ivory;
+            border: none;
+            outline: 2px solid red;
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <label for="email">Email Address:</label>
+        <label>
+            <input name="email" type="email" value="na@me@example.com">
+        </label>
+
+        <label for="secret">Secret Code: (lower case letters)</label>
+        <label>
+            <input name="secret" type="text" value="test" pattern="[a-z]+">
+        </label>
+
+        <label for="age">Your age: (18+)</label>
+        <label>
+            <input name="age" type="number" value="5" min="18">
+        </label>
+
+        <label><input name="tos" type="checkbox" required checked> - Do you agree to ToS?</label>
+    </form>
+</body>
+</html>

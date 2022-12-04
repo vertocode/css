@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invalid pseudo class simple</title>
+    <style>
+        /* Hide the fieldset after an invalid fieldset */
+        fieldset:invalid ~ fieldset {
+            display: none;
+        }
+
+        /* Dim and disable the button while the form is invalid */
+        form:invalid button {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        /* Change cursor to be pointer when the button is valid */
+        form button:valid {
+            cursor: pointer;
+        }
+
+        input,
+        textarea {
+            box-sizing: border-box;
+            width: 100%;
+            font-family: monospace;
+            padding: 0.25em 0.5em;
+        }
+
+        button {
+            width: 100%;
+            border: thin solid darkgrey;
+            font-size: 1.25em;
+            background-color: darkgrey;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <form>
+        <fieldset>
+            <label for="form-name">Name</label><br />
+            <input type="text" name="name" id="form-name" required />
+        </fieldset>
+
+        <fieldset>
+            <label for="form-email">Email Address</label><br />
+            <input type="email" name="email" id="form-email" required />
+        </fieldset>
+
+        <fieldset>
+            <label for="form-message">Message</label><br />
+            <textarea name="message" id="form-message" required></textarea>
+        </fieldset>
+
+        <button type="submit" name="send">Submit</button>
+    </form>
+</form>
+</body>
+</html>
