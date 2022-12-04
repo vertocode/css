@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Static example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .box {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background: red;
+            color: white;
+        }
+
+        #two {
+            /*`static` position is the default value to `position` attr*/
+            position: static;
+
+            background: blue;
+
+            /*`top` and `left` not working because `position` is static*/
+            top: 20px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box" id="one">One</div>
+    <div class="box" id="two">Two</div>
+    <div class="box" id="three">Three</div>
+    <div class="box" id="four">Four</div>
+</div>
+</body>
+</html>
