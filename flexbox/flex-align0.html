@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox align 0 — starting code</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 70%;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
+        button {
+            font-size: 18px;
+            line-height: 1.5;
+            width: 15%;
+        }
+
+        div {
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+
+            /* it align all items in center vertically. */
+            align-items: center; /* can be `flex-start and `flex-end` (more commons). */
+
+            /* apply a equal margin to each item horizontally. */
+            justify-content: space-around; /* also can be space-between(is similar to `space-around`, the difference
+            is that not contain margin before and after all items), flex-start, center, and flex-end (more commons). */
+
+        }
+
+        /* change the child elements alignment */
+        button:first-child {
+            align-self: flex-end;
+        }
+
+        button:last-child {
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button>Smile</button>
+        <button>Laugh</button>
+        <button>Wink</button>
+        <button>Shrug</button>
+        <button>Blush</button>
+    </div>
+</body>
+</html>
