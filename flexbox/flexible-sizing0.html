@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox 1 — basic flexbox model chosen</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            background: purple;
+            height: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            line-height: 100px;
+            margin: 0;
+        }
+
+        article {
+            padding: 10px;
+            margin: 10px;
+            background: aqua;
+            /* 1/4 of the space being any the minimum width. */
+            flex: 1;
+        }
+
+        article:nth-of-type(1) {
+            /* 1/4 of the space being 250px the minimum width. */
+
+            /* The unitless proportion value we discussed above. This can be specified separately using the flex-grow longhand property. */
+            flex-grow: 1;
+
+            /* The minimum size value we discussed above. This can be specified separately using the flex-basis longhand value. */
+            flex-basis: 250px;
+
+            /* A second unitless proportion value, flex-shrink, which comes into play when the flex items are overflowing
+             their container. This value specifies how much an item will shrink in order to prevent overflow. This is quite
+              an advanced flexbox feature and we won't be covering it any further in this article. */
+            flex-shrink: 2;
+
+
+            /* It's a shorthand to `flex-grow`, `flex-shrink` and `flex-basis`. Is the same thing that the above lines. */
+            /* flex: 1 2 250px; */
+        }
+
+        article:nth-of-type(3) {
+            /* 2/4 of the space being 200px the minimum width. */
+            flex: 2 200px;
+        }
+
+        section {
+            display: flex;
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Sample flexbox example</h1>
+</header>
+
+<section>
+    <article>
+        <h2>First article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+    </article>
+
+    <article>
+        <h2>Second article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+    </article>
+
+    <article>
+        <h2>Third article</h2>
+
+        <p>Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.</p>
+
+        <p>Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.</p>
+    </article>
+</section>
+</body>
+</html>
