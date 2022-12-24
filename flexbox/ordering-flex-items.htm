@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Flexbox ordering 0 — starting code</title>
+    <style>
+        html {
+            font-family: sans-serif;
+        }
+
+        body {
+            width: 70%;
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
+        button {
+            font-size: 18px;
+            line-height: 1.5;
+            width: 15%;
+            order: 0;
+        }
+
+        div {
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button:first-child {
+            background-color: #ddffdd;
+
+            /* The order of the items is from the smallest to the largest value of `order`,
+             the default being `0`, defining here as `1`, this will be the last item. */
+            order: 1;
+        }
+
+        button:last-child {
+            background-color: #6C7A89;
+
+            /* The value can be negative numbers to define before items that contain default order value */
+            order: -1;
+        }
+    </style>
+</head>
+<body>
+    <h1>code change order of the values, see the css code in the file to understand.</h1>
+    <div>
+        <button>first</button>
+        <button>second</button>
+        <button>third</button>
+        <button>fourth</button>
+        <button>last</button>
+    </div>
+</body>
+</html>
