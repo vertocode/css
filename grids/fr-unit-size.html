@@ -13,10 +13,9 @@
         }
 
         .container { 
-            /* define a grid layout, just this attribute not makes change in the screen */
             display: grid;
-            /* attribute example to change the grid layout */
-            grid-template-columns: 30% 40% 30%;
+            /* `fr` unit is to flexibly size grid rows and columns */
+            grid-template-columns: 2fr 1fr 1fr 2fr;
         }
 
         .container > div {
@@ -38,6 +37,7 @@
             <div>Five</div>
             <div>Six</div>
             <div>Seven</div>
+            <div>Eight</div>
         </div>
     </body>
 </html>

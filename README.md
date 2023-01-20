@@ -8,10 +8,17 @@ I post materials about this repository on my blog in the [CSS section](https://b
 
 ## Flexbox
 
-The flex layout allows responsive elements within a container to be automatically arranged depending on viewport size
+The flex layout allows responsive elements within a container to be automatically arranged depending on viewport.
 
 - [Github](https://github.com/vertocode/css/tree/main/flexbox)
 - [Blog page](https://blog.vertocode.com/#/css/flexbox)
+
+## Grids
+
+A grid is a collection of horizontal and vertical lines creating a pattern against which we can line up our design elements.
+
+- [Github](https://github.com/vertocode/css/tree/main/grids)
+- [Blog page](https://blog.vertocode.com/#/css/grids)
 
 ## Match elements with `^`, `$`, `*` and `~`
 
