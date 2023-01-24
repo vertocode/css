@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CSS Grid - line-based placement starting point</title>
+    <style>
+        body {
+            width: 90%;
+            max-width: 900px;
+            margin: 2em auto;
+            font: 0.9em/1.2 Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #eff6f4;
+        }
+
+        .container {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-areas:
+        "navbar navbar navbar"
+        "header header header"
+        "sidebar-left content sidebar-right"
+        "footer footer footer";
+            background-color: #000000;
+        }
+
+        nav {
+            grid-area: navbar;
+            background-color: #a4cbf3;
+        }
+
+        header {
+            grid-area: header;
+            background-color: #86ee82;
+        }
+
+        article {
+            grid-area: content;
+            background-color: #b382ee;
+        }
+
+        aside:first-of-type {
+            grid-area: sidebar-left;
+            background-color: #eecf82;
+        }
+
+        aside:last-of-type {
+            grid-area: sidebar-right;
+            background-color: #eecf82;
+        }
+
+        aside > button {
+            display: table;
+            margin: 10px auto;
+        }
+
+
+        footer {
+            grid-area: footer;
+            background-color: #ee829f;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <nav><button>Navbar</button></nav>
+    <header>Header</header>
+    <article>
+        <h1>My article</h1>
+        <p>
+            Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras
+            porttitor imperdiet nunc, at ultricies tellus laoreet sit amet. Sed
+            auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+            orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac
+            ornare ex malesuada et. In vitae convallis lacus. Aliquam erat
+            volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin
+            eros pharetra congue. Duis ornare egestas augue ut luctus. Proin
+            blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+            eget fermentum sapien.
+        </p>
+
+        <p>
+            Nam vulputate diam nec tempor bibendum. Donec luctus augue eget
+            malesuada ultrices. Phasellus turpis est, posuere sit amet dapibus ut,
+            facilisis sed est. Nam id risus quis ante semper consectetur eget
+            aliquam lorem. Vivamus tristique elit dolor, sed pretium metus
+            suscipit vel. Mauris ultricies lectus sed lobortis finibus. Vivamus eu
+            urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt
+            eget purus in interdum. Cum sociis natoque penatibus et magnis dis
+            parturient montes, nascetur ridiculus mus.
+        </p>
+    </article>
+    <aside>
+        <h2>Sidebar Left</h2>
+        <button>first</button>
+        <button>second</button>
+        <button>third</button>
+        <button>fourth</button>
+        <button>fifth</button>
+    </aside>
+    <aside>
+        <h2>Sidebar Right</h2>
+        <button>first</button>
+        <button>second</button>
+        <button>third</button>
+        <button>fourth</button>
+        <button>fifth</button>
+    </aside>
+    <footer>Footer</footer>
+</div>
+</body>
+</html>
